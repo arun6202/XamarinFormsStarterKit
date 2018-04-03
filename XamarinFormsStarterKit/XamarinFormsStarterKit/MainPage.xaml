@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinFormsStarterKit.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XamarinFormsStarterKit">
+    <StackLayout>
+        <Label
+            HorizontalOptions="Center"
+            Text="Welcome to Xamarin.Forms!"
+            VerticalOptions="Center" />
+
+        <Label
+            HorizontalOptions="Center"
+            Text="Welcome to Xamarin.Forms!1"
+            VerticalOptions="Center" />
+
+        <Label
+            HorizontalOptions="Center"
+            Text="Welcome to Xamarin.Forms!2"
+            VerticalOptions="Center" />
+        <Label
+            HorizontalOptions="Center"
+            Text="Welcome to Xamarin.Forms!3"
+            VerticalOptions="Center" />
+        <Label
+            HorizontalOptions="Center"
+            Text="Welcome to Xamarin.Forms!4"
+            VerticalOptions="Center" />
+        <Label
+            HorizontalOptions="Center"
+            Text="Welcome to Xamarin.Forms!5"
+            VerticalOptions="Center" />
+        <Label
+            HorizontalOptions="Center"
+            Text="Welcome to Xamarin.Forms!6"
+            VerticalOptions="Center" />
+
+    </StackLayout>
+</ContentPage>

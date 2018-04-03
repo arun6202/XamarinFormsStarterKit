@@ -1,0 +1,42 @@
+Update-Package
+
+Get-Project -All | Install-Package  Ansuria.XFGloss                       
+Get-Project -All | Install-Package  DevsDNA.XFParallax                    
+Get-Project -All | Install-Package  DK.SlidingPanel                       
+Get-Project -All | Install-Package  IdentityModel                         
+Get-Project -All | Install-Package  LiteDB                                
+Get-Project -All | Install-Package  Naxam.BottomTabbedPage                
+Get-Project -All | Install-Package  Naxam.I18n                            
+Get-Project -All | Install-Package  Newtonsoft.Json                       
+Get-Project -All | Install-Package  PCLCrypto                             
+Get-Project -All | Install-Package  Plugin.GridViewControl                
+Get-Project -All | Install-Package  Plugins.Forms.ButtonCircle            
+Get-Project -All | Install-Package  Polly                                 
+Get-Project -All | Install-Package  Rg.Plugins.Popup                      
+Get-Project -All | Install-Package  SkiaSharp.Extended                    
+Get-Project -All | Install-Package  SkiaSharp.Svg                         
+Get-Project -All | Install-Package  SkiaSharp.Views.Forms                 
+Get-Project -All | Install-Package  SlideOverKit                          
+Get-Project -All | Install-Package  System.IdentityModel.Tokens.Jwt       
+Get-Project -All | Install-Package  System.IO.Compression.ZipFile         
+Get-Project -All | Install-Package  Xam.Plugins.Forms.ExtendedCell        
+Get-Project -All | Install-Package  Xam.Plugins.Forms.ImageCircle         
+Get-Project -All | Install-Package  Xam.Plugins.Forms.ProgressRing        
+Get-Project -All | Install-Package  Xam.Plugins.Forms.RoundedBoxView      
+Get-Project -All | Install-Package  Xam.Plugins.Messaging                 
+Get-Project -All | Install-Package  Xam.Plugins.Notifier                  
+Get-Project -All | Install-Package  Xam.Plugins.Settings                  
+Get-Project -All | Install-Package  Xam.Plugins.TextToSpeech              
+Get-Project -All | Install-Package  Xam.Plugins.Vibrate                   
+Get-Project -All | Install-Package  Xamanimation                          
+Get-Project -All | Install-Package  Xamarin.Controls.SignaturePad.Forms   
+Get-Project -All | Install-Package  Xamarin.CustomControls.AccordionView  
+Get-Project -All | Install-Package  Xamarin.FFImageLoading                
+Get-Project -All | Install-Package  Xamarin.FFImageLoading.Forms          
+Get-Project -All | Install-Package  Xamarin.FFImageLoading.Svg.Forms      
+Get-Project -All | Install-Package  Xamarin.Forms                         
+Get-Project -All | Install-Package  Xamarin.Forms.DataGrid                
+//to be fixed Get-Project -All | Install-Package  Xamarin.Forms.Maps                    
+Get-Project -All | Install-Package  Xamarin.Forms.RangeSlider             
+Get-Project -All | Install-Package  Xamarin.RangeSlider                   
+Get-Project -All | Install-Package  XamForms.Controls.Calendar            

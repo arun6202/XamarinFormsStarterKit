@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinFormsStarterKit.LayoutGallery.airbnb_lottie_android.XAML.DashBoardView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <FlexLayout AlignItems="Stretch" Direction="Column">
+            <FlexLayout
+                Direction="Column"
+                FlexLayout.Grow="2"
+                JustifyContent="Center">
+                <BoxView FlexLayout.Grow=".5" />
+                <AbsoluteLayout
+                    Margin="10,10,10,5"
+                    FlexLayout.Grow="2"
+                    FlowDirection="LeftToRight">
+                    <BoxView AbsoluteLayout.LayoutBounds=".05,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".25,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                </AbsoluteLayout>
+                <BoxView FlexLayout.Grow="1.5" />
+            </FlexLayout>
+            <AbsoluteLayout FlexLayout.Grow="5" />
+            <AbsoluteLayout FlexLayout.Grow="1">
+                <BoxView AbsoluteLayout.LayoutBounds=".05,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <BoxView AbsoluteLayout.LayoutBounds=".25,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <BoxView AbsoluteLayout.LayoutBounds=".5,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <BoxView AbsoluteLayout.LayoutBounds=".75,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <BoxView AbsoluteLayout.LayoutBounds=".9,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            </AbsoluteLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

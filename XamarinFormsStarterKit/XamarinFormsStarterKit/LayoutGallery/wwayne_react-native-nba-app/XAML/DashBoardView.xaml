@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinFormsStarterKit.LayoutGallery.wwayne_react_native_nba_app.XAML.DashBoardView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <FlexLayout
+            AlignItems="Stretch"
+            CompressedLayout.IsHeadless="true"
+            Direction="Column">
+            <AbsoluteLayout CompressedLayout.IsHeadless="true" FlexLayout.Grow="1.5">
+                <BoxView AbsoluteLayout.LayoutBounds=".95,.1,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+                <BoxView AbsoluteLayout.LayoutBounds=".01,.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <BoxView AbsoluteLayout.LayoutBounds=".01,.7,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+            </AbsoluteLayout>
+            <BoxView FlexLayout.Grow=".35" />
+            <FlexLayout
+                CompressedLayout.IsHeadless="true"
+                Direction="Row"
+                FlexLayout.Grow="1"
+                JustifyContent="Center">
+                <AbsoluteLayout Margin="10,10,10,10" FlexLayout.Grow="1">
+                    <BoxView AbsoluteLayout.LayoutBounds=".2,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".2,.4,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".4,.4,20,50" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".5,.1,30,10" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".5,.4,2,25" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".6,.4,20,50" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".8,.4,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".8,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                </AbsoluteLayout>
+            </FlexLayout>
+            <FlexLayout
+                CompressedLayout.IsHeadless="true"
+                Direction="Row"
+                FlexLayout.Grow="1"
+                JustifyContent="Center">
+                <AbsoluteLayout Margin="10,10,10,10" FlexLayout.Grow="1">
+                    <BoxView AbsoluteLayout.LayoutBounds=".2,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".2,.4,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".4,.4,20,50" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".5,.1,30,10" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".5,.4,2,25" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".6,.4,20,50" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".8,.4,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".8,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                </AbsoluteLayout>
+            </FlexLayout>
+            <FlexLayout
+                CompressedLayout.IsHeadless="true"
+                Direction="Row"
+                FlexLayout.Grow="1"
+                JustifyContent="Center">
+                <AbsoluteLayout Margin="10,10,10,10" FlexLayout.Grow="1">
+                    <BoxView AbsoluteLayout.LayoutBounds=".2,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".2,.4,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".4,.4,20,50" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".5,.1,30,10" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".5,.4,2,25" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".6,.4,20,50" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".8,.4,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".8,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                </AbsoluteLayout>
+            </FlexLayout>
+            <FlexLayout
+                CompressedLayout.IsHeadless="true"
+                Direction="Row"
+                FlexLayout.Grow="1"
+                JustifyContent="Center">
+                <AbsoluteLayout Margin="10,10,10,10" FlexLayout.Grow="1">
+                    <BoxView AbsoluteLayout.LayoutBounds=".2,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".2,.4,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".4,.4,20,50" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".5,.1,30,10" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".5,.4,2,25" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".6,.4,20,50" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".8,.4,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <BoxView AbsoluteLayout.LayoutBounds=".8,.6,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                </AbsoluteLayout>
+            </FlexLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
