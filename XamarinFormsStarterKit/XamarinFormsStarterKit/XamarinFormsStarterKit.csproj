@@ -59,5 +59,16 @@
 
   <ItemGroup>
     <Folder Include="LayoutGallery\airbnb_lottie-android\images\reference\" />
+    <Folder Include="LayoutGallery\kickstarter_android-oss\" />
+    <Folder Include="LayoutGallery\kickstarter_android-oss\images\" />
+    <Folder Include="LayoutGallery\kickstarter_android-oss\XAML\" />
+    <Folder Include="LayoutGallery\kickstarter_android-oss\images\reference\" />
+    <Folder Include="LayoutGallery\kickstarter_android-oss\images\target\" />
+    <Folder Include="LayoutGallery\zCheatSheet\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="LayoutGallery\kickstarter_android-oss\images\reference\Example3.gif" />
+    <None Remove="LayoutGallery\kickstarter_android-oss\images\target\dashboardUWP.PNG" />
+    <None Remove="LayoutGallery\kickstarter_android-oss\images\target\dashboardUWPFULL.PNG" />
   </ItemGroup>
 </Project>
