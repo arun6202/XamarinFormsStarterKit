@@ -8,3 +8,38 @@ l|L 0|9  - one  line or lines word will be emitted
 p|P 0|9  - one  paragraph or paragraghs word will be emitted  
 t- random text
 sl|Sl 0|9  - one slug  or slugs word will be emitted  
+
+                sample
+
+                <Label Text="w"  ></Label>
+                <Label Text="w9" ></Label>
+                <Label Text="l" ></Label>
+                <Label Text="l9" ></Label>
+                <Label Text="p" ></Label>
+                <Label Text="p9" ></Label>
+                <Label Text="t" ></Label>
+                <Label Text="sl" ></Label>
+                <Label Text="sl9" ></Label>
+
+
+            <Label Text="w"  ></Label>  =>error
+            <Label Text="w9" ></Label>=>saepe numquam labore libero nam dolor et et nulla
+            <Label Text="l" ></Label>=>Et suscipit quisquam.
+                                        Accusantium incidunt vero sapiente cum libero incidunt libero sit quidem.
+                                        Aliquam quia ut voluptas.
+                                        Laboriosam consequatur ut aliquid ut dolor optio.
+                                        Praesentium officia et.
+            <Label Text="l9" ></Label>=>Quia delectus ut quia blanditiis voluptatem non aut.
+                                        Fugit sed eveniet.
+                                        Unde et aperiam sed molestiae velit provident occaecati.
+                                        Omnis doloribus iusto quis.
+                                        Nulla provident aut et sunt labore officia.
+                                        Consequatur id et quibusdam inventore inventore.
+                                        Animi modi eligendi consequatur est quibusdam ad.
+                                        Sint sed dolor eveniet consequuntur repellat consectetur voluptates.
+                                        Vitae qui commodi enim numquam laborum doloremque distinctio architecto dicta. 
+            <Label Text="p" ></Label>=>Id consequuntur ex rem repellat. Omnis ullam molestiae soluta assumenda sunt accusamus. Sapiente repudiandae laboriosam praesentium laudantium. Dolorem repudiandae porro rem. Magnam eum laborum distinctio ut et quo minus.
+            <Label Text="p9" ></Label>=>Voluptate dolorem molestiae consequuntur iure rerum est praesentium in. Temporibus ea molestiae est fugit voluptatem laborum dolorum commodi. Qui velit aut est maxime modi. Quidem vitae et inventore voluptas quas molestias iste sunt voluptates. Architecto sed eius qui ipsam. Voluptates pariatur praesentium sapiente unde accusantium consequatur sunt. Saepe a asperiores earum et. Dolorem cumque ut autem suscipit omnis. Ut esse explicabo accusantium velit minima perspiciatis eum aliquam consequatur. Tempora et eveniet.
+            <Label Text="t" ></Label>=>Inventore veritatis ut. Est omnis natus ratione quaerat tenetur. Quo dolore architecto voluptatibus saepe sapiente hic ipsa et occaecati. Est perspiciatis ut rerum officia eveniet quo. Atque ea quisquam debitis voluptatem enim autem voluptatum nostrum. Sed aut voluptatem voluptas quidem doloribus aut exercitationem sed.
+            <Label Text="sl" ></Label>=>Inventore veritatis ut. Est omnis natus ratione quaerat tenetur. Quo dolore architecto voluptatibus saepe sapiente hic ipsa et occaecati. Est perspiciatis ut rerum officia eveniet quo. Atque ea quisquam debitis voluptatem enim autem voluptatum nostrum. Sed aut voluptatem voluptas quidem doloribus aut exercitationem sed.
+            <Label Text="sl9" ></Label>=>sit-et-rerum
