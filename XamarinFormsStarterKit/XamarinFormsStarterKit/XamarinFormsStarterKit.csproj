@@ -59,6 +59,9 @@
     <Compile Update="LayoutGallery\kickstarter_android-oss\XAML\BackerView.xaml.cs">
       <DependentUpon>BackerView.xaml</DependentUpon>
     </Compile>
+    <Compile Update="LayoutGallery\VisualElementColorizer\XAML\Tester.xaml.cs">
+      <DependentUpon>Tester.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -70,6 +73,7 @@
     <Folder Include="LayoutGallery\kickstarter_android-oss\images\target\" />
     <Folder Include="LayoutGallery\zCheatSheet\" />
     <Folder Include="LayoutGallery\VisualElementColorizer\" />
+    <Folder Include="LayoutGallery\VisualElementColorizer\XAML\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="LayoutGallery\kickstarter_android-oss\images\reference\Example3.gif" />

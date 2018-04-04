@@ -1,32 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage Appearing="Handle_Appearing" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.LayoutGallery.kickstarter_androidoss.XAML.BackerView">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.LayoutGallery.kickstarter_androidoss.XAML.BackerView">
    <ContentPage.Content>
       <FlexLayout AlignItems="Stretch" Direction="Column">
-         <AbsoluteLayout FlexLayout.Grow="2"  Margin="10">
-       <Entry Text="test"></Entry>
- 
-            <BoxView   AbsoluteLayout.LayoutBounds=".05,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <BoxView AbsoluteLayout.LayoutBounds=".75,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <BoxView AbsoluteLayout.LayoutBounds=".95,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+         <AbsoluteLayout FlexLayout.Grow="2">
+            <BoxView AbsoluteLayout.LayoutBounds=".05,.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <BoxView AbsoluteLayout.LayoutBounds=".75,.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <BoxView AbsoluteLayout.LayoutBounds=".95,.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
          </AbsoluteLayout>
          <ScrollView FlexLayout.Grow="15">
-
             <FlexLayout AlignItems="Stretch" Direction="Column">
-               <BoxView Margin="20" FlexLayout.Grow="2" />
+               <BoxView Margin="20" FlexLayout.Grow="3" />
                <FlexLayout Margin="20" FlexLayout.Grow="3" Direction="Column">
-                  <BoxView  FlexLayout.Grow="3" />
-                  <BoxView FlexLayout.Grow=".5" />
-                  <BoxView FlexLayout.Grow=".7" />
-                  <BoxView FlexLayout.Grow=".5" />
-                        <BoxView FlexLayout.Grow=".5" />
-                        <BoxView FlexLayout.Grow=".5" />
-                        <BoxView FlexLayout.Grow=".7" />
-                        <BoxView FlexLayout.Grow="1" />
-                        <BoxView FlexLayout.Grow="1" />
-                        <BoxView FlexLayout.Grow="1" />
-                        <BoxView FlexLayout.Grow="1" />
-                        <BoxView FlexLayout.Grow="1" />
-                       
+                  <BoxView FlexLayout.Grow="1" />
+                  <BoxView FlexLayout.Grow="1" />
+                  <BoxView FlexLayout.Grow="1" />
                </FlexLayout>
             </FlexLayout>
          </ScrollView>

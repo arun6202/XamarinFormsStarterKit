@@ -6,6 +6,7 @@ using Xamarin.Forms;
 //using XamarinFormsStarterKit.LayoutGallery.wwayne_react_native_nba_app.XAML;
 using XamarinFormsStarterKit.LayoutGallery.airbnb_lottie_android.XAML;
 using XamarinFormsStarterKit.LayoutGallery.kickstarter_androidoss.XAML;
+using XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer.XAML;
 
 namespace XamarinFormsStarterKit
 {
@@ -15,7 +16,7 @@ namespace XamarinFormsStarterKit
 		{
 			InitializeComponent();
 
-            MainPage = new BackerView();
+            MainPage = new Tester();
 		}
 
 		protected override void OnStart ()
