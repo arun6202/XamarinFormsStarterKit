@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.LayoutGallery.armcha_Ribble.XAML.DetailsView">
+<ContentPage.Padding>
+<OnPlatform x:TypeArguments="Thickness">
+    <On Platform="iOS" Value="0, 0, 0, 0" />
+</OnPlatform>
+</ContentPage.Padding>
+<ContentPage.Content>
+
+   <FlexLayout AlignItems="Stretch" Direction="Column">
+        <BoxView FlexLayout.Grow="3"></BoxView>
+        <BoxView FlexLayout.Grow="1"></BoxView>
+        <BoxView FlexLayout.Grow="2"></BoxView>
+        <BoxView FlexLayout.Grow="1"></BoxView>
+</FlexLayout>
+    
+</ContentPage.Content>
+</ContentPage>
