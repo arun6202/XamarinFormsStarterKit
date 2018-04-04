@@ -80,11 +80,16 @@
     <Folder Include="LayoutGallery\zCheatSheet\" />
     <Folder Include="LayoutGallery\VisualElementColorizer\" />
     <Folder Include="LayoutGallery\VisualElementColorizer\XAML\" />
+    <Folder Include="LayoutGallery\SampleImages\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="LayoutGallery\kickstarter_android-oss\images\reference\Example3.gif" />
     <None Remove="LayoutGallery\kickstarter_android-oss\images\target\dashboardUWP.PNG" />
     <None Remove="LayoutGallery\kickstarter_android-oss\images\target\dashboardUWPFULL.PNG" />
     <None Remove="XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit\XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit.csproj" />
+    <None Remove="LayoutGallery\SampleImages\basicbitmaps-large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LayoutGallery\SampleImages\basicbitmaps-large.png" />
   </ItemGroup>
 </Project>

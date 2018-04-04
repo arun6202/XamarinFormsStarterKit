@@ -8,8 +8,8 @@
     
     <ContentPage.Content >
        
-        <FlexLayout Direction="Column" Margin="20" >
-            <Image x:Name="image" Aspect="Fill" />
+        <FlexLayout Direction="Column" Margin="20"  >
+            <Image x:Name="image" Source="50/50"  Aspect="Fill" />
                 <Label Text="w"  ></Label>
                 <Label Text="w9" ></Label>
                 <Label Text="l" ></Label>
