@@ -2,6 +2,8 @@
     using System.Collections.Generic;
     using System.Text;
     using Xamarin.Forms;
+    using System.Reflection;
+
 
     namespace XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer
     {
@@ -47,8 +49,18 @@
                     currentControl.BackgroundColor = color;
                     colorList.RemoveAt(randomIndex);
 
+
+                if (child.GetType().GetTypeInfo().GetDeclaredProperty("Text") != null)
+                {
+
+                }
+
+
                 }
             }
+
+
+
 
             public static readonly Color AliceBlue = Color.FromRgb(240, 248, 255);
             public static readonly Color AntiqueWhite = Color.FromRgb(250, 235, 215);

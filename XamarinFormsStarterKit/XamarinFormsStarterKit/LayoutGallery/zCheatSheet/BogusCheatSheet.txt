@@ -1,0 +1,10 @@
+﻿Shortcut syntax usage:
+
+lorem words syntax emit
+
+w|W 0|9  - one  word or more word will be emitted
+s|S 0|9  - one  sentence or sentences word will be emitted
+l|L 0|9  - one  line or lines word will be emitted  
+p|P 0|9  - one  paragraph or paragraghs word will be emitted  
+t- random text
+s|S 0|9  - one slug  or slugs word will be emitted  
