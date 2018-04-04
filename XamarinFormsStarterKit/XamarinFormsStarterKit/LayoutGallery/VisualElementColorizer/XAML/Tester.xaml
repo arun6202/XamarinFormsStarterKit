@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage  xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer.XAML.Tester">
+     <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0, 20, 0, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    
     <ContentPage.Content >
+       
         <FlexLayout Direction="Column" Margin="20" >
+            <Image x:Name="image" Aspect="Fill" />
                 <Label Text="w"  ></Label>
                 <Label Text="w9" ></Label>
                 <Label Text="l" ></Label>

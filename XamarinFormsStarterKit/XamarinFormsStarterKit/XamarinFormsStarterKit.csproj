@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -50,6 +50,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
@@ -61,6 +64,9 @@
     </Compile>
     <Compile Update="LayoutGallery\VisualElementColorizer\XAML\Tester.xaml.cs">
       <DependentUpon>Tester.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit\MyPage.xaml.cs">
+      <DependentUpon>MyPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -79,5 +85,6 @@
     <None Remove="LayoutGallery\kickstarter_android-oss\images\reference\Example3.gif" />
     <None Remove="LayoutGallery\kickstarter_android-oss\images\target\dashboardUWP.PNG" />
     <None Remove="LayoutGallery\kickstarter_android-oss\images\target\dashboardUWPFULL.PNG" />
+    <None Remove="XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit\XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit.csproj" />
   </ItemGroup>
 </Project>
