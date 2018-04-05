@@ -42,11 +42,15 @@
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.3.6" />
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.346973-nightly" />
     <PackageReference Include="Xamarin.Forms.DataGrid" Version="2.0.0" />
-    <PackageReference Include="Xamarin.Forms.RangeSlider" Version="0.7.31" />
-    <PackageReference Include="Xamarin.RangeSlider" Version="0.7.31" />
     <PackageReference Include="XamForms.Controls.Calendar" Version="1.1.1" />
     <PackageReference Include="Ansuria.XFGloss" Version="1.1.3" />
     <PackageReference Include="Bogus" Version="22.0.7" />
+    <PackageReference Include="Xamarin.Forms.RangeSlider" Version="0.7.33" />
+    <PackageReference Include="Xamarin.RangeSlider" Version="0.7.33" />
+    <PackageReference Include="DLToolkit.Forms.Controls.FlowListView" Version="2.0.10" />
+    <PackageReference Include="DLToolkit.Forms.Controls.TagEntryView" Version="1.0.4" />
+    <PackageReference Include="DLToolkit.Forms.Controls.ImageCropView" Version="1.0.6" />
+    <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>
