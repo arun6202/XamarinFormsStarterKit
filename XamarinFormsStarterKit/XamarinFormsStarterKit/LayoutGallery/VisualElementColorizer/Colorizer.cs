@@ -13,19 +13,30 @@ public static class Colorizer
 
 static Colorizer()
 {
-colorizeList = new List<Color>(colorList);
-loremTextList = new List<Color>(colorList);
-loremImageList = new List<Color>(colorList);
+        colorizeList = new List<Color>(colorList);
+        colorizeLightList = new List<Color>(colorList.Where((arg) => arg.ToString().StartsWith("Light", StringComparison.CurrentCulture)));
+            colorizeDarkList = new List<Color>(colorList.Where((arg) => arg.ToString().StartsWith("Dark", StringComparison.CurrentCulture)));
+
+        loremTextList = new List<Color>(colorList);
+        loremImageList = new List<Color>(colorList);
 }
 
 static List<Color> colorizeList;
 static List<Color> loremTextList;
 static List<Color> loremImageList;
+    static List<Color> colorizeLightList;
+
+    static List<Color> colorizeDarkList;
+
 
 static readonly Lorem lorem = new Lorem();   
 
 static Color RandomColor(List<Color> colors)
 {
+            if (colors.Count == 0)
+            {
+                return Color.White; // to do all viable colors are emptied , so please try different layout
+            }
 var randomIndex = new Random().Next(colors.Count);
 var color = colorList[randomIndex];           
 colors.RemoveAt(randomIndex);
@@ -38,34 +49,101 @@ public static void Colorize(Layout layout, bool apply = true)
 #if DEBUG
 
 #else
-       return;
+return;
 #endif
 
 if (!apply)
 {
-    return;
+return;
 }
 
-if (colorizeList.Count == 0)
-{
-    return; // to do all viable colors are emptied , so please try different layout
-}
 
 layout.BackgroundColor = RandomColor(colorizeList);
 
 foreach (var child in layout.Children)
 {
-    if (child is Layout currentLayout)
-    {
-        Colorize(currentLayout);
-    }
-    var currentControl = (VisualElement)child;              
-    currentControl.BackgroundColor = RandomColor(colorizeList);
- }
+if (child is Layout currentLayout)
+{
+Colorize(currentLayout);
+}
+var currentControl = (VisualElement)child;   
+            if (child is Layout)
+            {
+                    currentControl.BackgroundColor = RandomColor(colorizeList);
+
+            }
+            else
+            {
+                currentControl.BackgroundColor = RandomColor(colorizeList);
+
+            }
+}
 }
 
 
 public static void Image(Layout layout, bool apply = true)
+{
+
+#if DEBUG
+
+#else
+return;
+#endif
+
+if (!apply)
+{
+return;
+}
+
+
+foreach (var child in layout.Children)
+{
+if (child is Layout currentLayout)
+{
+Colorize(currentLayout);
+}
+
+if (child is Image image)
+{
+
+var currentControl = (Image)child;
+
+var source = currentControl.Source.ToString();
+source = source.Replace("File:", "");
+var dimensions = source.Split(new string[] { "/" }, StringSplitOptions.None);
+
+if (Int32.TryParse(dimensions[0], out int width))
+{
+currentControl.WidthRequest = width;
+}
+
+if (Int32.TryParse(dimensions[1], out int height))
+{
+currentControl.HeightRequest = height;
+}
+
+
+if (Device.RuntimePlatform == Device.iOS)
+{
+currentControl.Source = "Icon-Small";
+}
+
+if (Device.RuntimePlatform == Device.Android)
+{
+currentControl.Source = "icon";
+}
+if (Device.RuntimePlatform == Device.UWP)
+{
+currentControl.Source = "Square150x150Logo.scale-100";
+}
+
+} 
+
+}
+}
+
+
+public static void LoremText(Layout layout, bool apply = true)
 {
 
 #if DEBUG
@@ -79,199 +157,137 @@ if (!apply)
 return;
 }
 
-
 foreach (var child in layout.Children)
 {
 if (child is Layout currentLayout)
 {
-    Colorize(currentLayout);
+LoremText(currentLayout);
 }
 
-if (child is Image image)
+if (child.GetType().GetTypeInfo().GetDeclaredProperty("Text") != null)
 {
 
-var currentControl = (Image)child;
-
-    var source = currentControl.Source.ToString();
-    source = source.Replace("File:", "");
-    var dimensions = source.Split(new string[] { "/" }, StringSplitOptions.None);
-
-    if (Int32.TryParse(dimensions[0], out int width))
-    {
-        currentControl.WidthRequest = width;
-    }
-
-    if (Int32.TryParse(dimensions[1], out int height))
-    {
-        currentControl.HeightRequest = height;
-    }
-
-
-if (Device.RuntimePlatform == Device.iOS)
+if ((child is Label label))
 {
-        currentControl.Source = "Icon-Small";
+    var text = label.Text.ToLower();
+
+    text = GenerateLoremText(text);
+
+    label.Text = text;
+    label.TextColor = RandomColor(loremTextList);
 }
 
-if (Device.RuntimePlatform == Device.Android)
+if ((child is Span span))
 {
-        currentControl.Source = "icon";
+    var text = span.Text.ToLower();
+
+    text = GenerateLoremText(text);
+
+    span.Text = text;
+    span.TextColor = RandomColor(loremTextList);
 }
-if (Device.RuntimePlatform == Device.UWP)
+
+if ((child is Entry entry))
 {
-        currentControl.Source = "Square150x150Logo.scale-100";
+    var text = entry.Text.ToLower();
+
+    text = GenerateLoremText(text);
+
+    entry.Text = text;
+    entry.TextColor = RandomColor(loremTextList);
 }
 
-        } 
-
-}
-}
-
-
-public static void LoremText(Layout layout, bool apply = true)
+if ((child is Editor editor))
 {
+    var text = editor.Text.ToLower();
 
-    #if DEBUG
+    text = GenerateLoremText(text);
 
-    #else
-         return;
-    #endif
+    editor.Text = text;
+    editor.TextColor = RandomColor(loremTextList);
+}
 
-    if (!apply)
-    {
-        return;
-    }
-
-    foreach (var child in layout.Children)
-    {
-        if (child is Layout currentLayout)
-        {
-        LoremText(currentLayout);
-        }
-
-    if (child.GetType().GetTypeInfo().GetDeclaredProperty("Text") != null)
-    {
-        
-        if ((child is Label label))
-        {
-            var text = label.Text.ToLower();
-
-            text = GenerateLoremText(text);
-
-            label.Text = text;
-            label.TextColor = RandomColor(loremTextList);
-        }
-
-        if ((child is Span span))
-        {
-            var text = span.Text.ToLower();
-
-            text = GenerateLoremText(text);
-
-            span.Text = text;
-            span.TextColor = RandomColor(loremTextList);
-        }
-
-        if ((child is Entry entry))
-        {
-            var text = entry.Text.ToLower();
-
-            text = GenerateLoremText(text);
-
-            entry.Text = text;
-            entry.TextColor = RandomColor(loremTextList);
-        }
-
-        if ((child is Editor editor))
-        {
-            var text = editor.Text.ToLower();
-
-            text = GenerateLoremText(text);
-
-            editor.Text = text;
-            editor.TextColor = RandomColor(loremTextList);
-        }
-
-    }
+}
 
 
-    }
+}
 }
 
 private static string GenerateLoremText(string text)
 {
 if (text.StartsWith("w", StringComparison.CurrentCulture))
 {
-    text = text.Replace("w", string.Empty);
-    if (text.Length == 0)
-    {
-        text = lorem.Word();
-    }
-    else
-    {
+text = text.Replace("w", string.Empty);
+if (text.Length == 0)
+{
+text = lorem.Word();
+}
+else
+{
 
-        if (Int32.TryParse(text, out int number))
-        {
-            text = string.Join(" ", lorem.Words(number));
-        }
-    }
+if (Int32.TryParse(text, out int number))
+{
+    text = string.Join(" ", lorem.Words(number));
+}
+}
 
 }
 
 if (text.StartsWith("l", StringComparison.CurrentCulture))
 {
-    text = text.Replace("l", string.Empty);
-    if (text.Length == 0)
-    {
-        text = lorem.Lines();
-    }
-    else
-    {
-        if (Int32.TryParse(text, out int number))
-        {
-            text = string.Join(" ", lorem.Lines(number));
-        }
-    }
+text = text.Replace("l", string.Empty);
+if (text.Length == 0)
+{
+text = lorem.Lines();
+}
+else
+{
+if (Int32.TryParse(text, out int number))
+{
+    text = string.Join(" ", lorem.Lines(number));
+}
+}
 }
 if (text.StartsWith("p", StringComparison.CurrentCulture))
 {
-    text = text.Replace("p", string.Empty);
-    if (text.Length == 0)
-    {
-        text = lorem.Paragraph();
-    }
-    else
-    {
+text = text.Replace("p", string.Empty);
+if (text.Length == 0)
+{
+text = lorem.Paragraph();
+}
+else
+{
 
-        if (Int32.TryParse(text, out int number))
-        {
-            text = string.Join(" ", lorem.Paragraph(number));
-        }
-    }
+if (Int32.TryParse(text, out int number))
+{
+    text = string.Join(" ", lorem.Paragraph(number));
+}
+}
 }
 if (text.StartsWith("t", StringComparison.CurrentCulture))
 {
-    text = text.Replace("t", string.Empty);
-    if (text.Length == 0)
-    {
-        text = lorem.Text();
-    }
+text = text.Replace("t", string.Empty);
+if (text.Length == 0)
+{
+text = lorem.Text();
+}
 
 }
 if (text.StartsWith("sl", StringComparison.CurrentCulture))
 {
-    text = text.Replace("sl", string.Empty);
-    if (text.Length == 0)
-    {
-        text = lorem.Slug();
-    }
-    else
-    {
+text = text.Replace("sl", string.Empty);
+if (text.Length == 0)
+{
+text = lorem.Slug();
+}
+else
+{
 
-        if (Int32.TryParse(text, out int number))
-        {
-            text = string.Join(" ", lorem.Slug(number));
-        }
-    }
+if (Int32.TryParse(text, out int number))
+{
+    text = string.Join(" ", lorem.Slug(number));
+}
+}
 }
 
 return text;
@@ -421,149 +437,149 @@ public static readonly Color Yellow = Color.FromRgb(255, 255, 0);
 public static readonly Color YellowGreen = Color.FromRgb(154, 205, 50);
 
 static List<Color> colorList = new List<Color>
-    {
-      AliceBlue,
-        AntiqueWhite,
-        Aqua,
-        Aquamarine,
-        Azure,
-        Beige,
-        Bisque,
-        Black,
-        BlanchedAlmond,
-        Blue,
-        BlueViolet,
-        Brown,
-        BurlyWood,
-        CadetBlue,
-        Chartreuse,
-        Chocolate,
-        Coral,
-        CornflowerBlue,
-        Cornsilk,
-        Crimson,
-        Cyan,
-        DarkBlue,
-        DarkCyan,
-        DarkGoldenrod,
-        DarkGray,
-        DarkGreen,
-        DarkKhaki,
-        DarkMagenta,
-        DarkOliveGreen,
-        DarkOrange,
-        DarkOrchid,
-        DarkRed,
-        DarkSalmon,
-        DarkSeaGreen,
-        DarkSlateBlue,
-        DarkSlateGray,
-        DarkTurquoise,
-        DarkViolet,
-        DeepPink,
-        DeepSkyBlue,
-        DimGray,
-        DodgerBlue,
-        Firebrick,
-        FloralWhite,
-        ForestGreen,
-        Fuschia,
-        Gainsboro,
-        GhostWhite,
-        Gold,
-        Goldenrod,
-        Gray,
-        Green,
-        GreenYellow,
-        Honeydew,
-        HotPink,
-        IndianRed,
-        Indigo,
-        Ivory,
-        Khaki,
-        Lavender,
-        LavenderBlush,
-        LawnGreen,
-        LemonChiffon,
-        LightBlue,
-        LightCoral,
-        LightCyan,
-        LightGoldenrodYellow,
-        LightGray,
-        LightGreen,
-        LightPink,
-        LightSalmon,
-        LightSeaGreen,
-        LightSkyBlue,
-        LightSlateGray,
-        LightSteelBlue,
-        LightYellow,
-        Lime,
-        LimeGreen,
-        Linen,
-        Magenta,
-        Maroon,
-        MediumAquamarine,
-        MediumBlue,
-        MediumOrchid,
-        MediumPurple,
-        MediumSeaGreen,
-        MediumSlateBlue,
-        MediumSpringGreen,
-        MediumTurquoise,
-        MediumVioletRed,
-        MidnightBlue,
-        MintCream,
-        MistyRose,
-        Moccasin,
-        NavajoWhite,
-        Navy,
-        OldLace,
-        Olive,
-        OliveDrab,
-        Orange,
-        OrangeRed,
-        Orchid,
-        PaleGoldenrod,
-        PaleGreen,
-        PaleTurquoise,
-        PaleVioletRed,
-        PapayaWhip,
-        PeachPuff,
-        Peru,
-        Pink,
-        Plum,
-        PowderBlue,
-        Purple,
-        Red,
-        RosyBrown,
-        RoyalBlue,
-        SaddleBrown,
-        Salmon,
-        SandyBrown,
-        SeaGreen,
-        SeaShell,
-        Sienna,
-        Silver,
-        SkyBlue,
-        SlateBlue,
-        SlateGray,
-        Snow,
-        SpringGreen,
-        SteelBlue,
-        Tan,
-        Teal,
-        Thistle,
-        Tomato,
-        Transparent,
-        Turquoise,
-        Violet,
-        Wheat,
-        White,
-        WhiteSmoke,
-        Yellow,
-        YellowGreen
-    };
+{
+AliceBlue,
+AntiqueWhite,
+Aqua,
+Aquamarine,
+Azure,
+Beige,
+Bisque,
+Black,
+BlanchedAlmond,
+Blue,
+BlueViolet,
+Brown,
+BurlyWood,
+CadetBlue,
+Chartreuse,
+Chocolate,
+Coral,
+CornflowerBlue,
+Cornsilk,
+Crimson,
+Cyan,
+DarkBlue,
+DarkCyan,
+DarkGoldenrod,
+DarkGray,
+DarkGreen,
+DarkKhaki,
+DarkMagenta,
+DarkOliveGreen,
+DarkOrange,
+DarkOrchid,
+DarkRed,
+DarkSalmon,
+DarkSeaGreen,
+DarkSlateBlue,
+DarkSlateGray,
+DarkTurquoise,
+DarkViolet,
+DeepPink,
+DeepSkyBlue,
+DimGray,
+DodgerBlue,
+Firebrick,
+FloralWhite,
+ForestGreen,
+Fuschia,
+Gainsboro,
+GhostWhite,
+Gold,
+Goldenrod,
+Gray,
+Green,
+GreenYellow,
+Honeydew,
+HotPink,
+IndianRed,
+Indigo,
+Ivory,
+Khaki,
+Lavender,
+LavenderBlush,
+LawnGreen,
+LemonChiffon,
+LightBlue,
+LightCoral,
+LightCyan,
+LightGoldenrodYellow,
+LightGray,
+LightGreen,
+LightPink,
+LightSalmon,
+LightSeaGreen,
+LightSkyBlue,
+LightSlateGray,
+LightSteelBlue,
+LightYellow,
+Lime,
+LimeGreen,
+Linen,
+Magenta,
+Maroon,
+MediumAquamarine,
+MediumBlue,
+MediumOrchid,
+MediumPurple,
+MediumSeaGreen,
+MediumSlateBlue,
+MediumSpringGreen,
+MediumTurquoise,
+MediumVioletRed,
+MidnightBlue,
+MintCream,
+MistyRose,
+Moccasin,
+NavajoWhite,
+Navy,
+OldLace,
+Olive,
+OliveDrab,
+Orange,
+OrangeRed,
+Orchid,
+PaleGoldenrod,
+PaleGreen,
+PaleTurquoise,
+PaleVioletRed,
+PapayaWhip,
+PeachPuff,
+Peru,
+Pink,
+Plum,
+PowderBlue,
+Purple,
+Red,
+RosyBrown,
+RoyalBlue,
+SaddleBrown,
+Salmon,
+SandyBrown,
+SeaGreen,
+SeaShell,
+Sienna,
+Silver,
+SkyBlue,
+SlateBlue,
+SlateGray,
+Snow,
+SpringGreen,
+SteelBlue,
+Tan,
+Teal,
+Thistle,
+Tomato,
+Transparent,
+Turquoise,
+Violet,
+Wheat,
+White,
+WhiteSmoke,
+Yellow,
+YellowGreen
+};
 
 }
 }
