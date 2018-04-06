@@ -51,6 +51,7 @@
     <PackageReference Include="DLToolkit.Forms.Controls.TagEntryView" Version="1.0.4" />
     <PackageReference Include="DLToolkit.Forms.Controls.ImageCropView" Version="1.0.6" />
     <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
+    <PackageReference Include="Xamarin.CustomControls.RepeaterView" Version="1.2.2" />
   </ItemGroup>
 
   <ItemGroup>
