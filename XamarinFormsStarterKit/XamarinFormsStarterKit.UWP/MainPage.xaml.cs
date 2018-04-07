@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -20,6 +21,14 @@ namespace XamarinFormsStarterKit.UWP
         public MainPage()
         {
             this.InitializeComponent();
+
+            var assembliesToInclude = new List<Assembly>()
+{
+    typeof(CachedImage).GetTypeInfo().Assembly,
+    typeof(CachedImageRenderer).GetTypeInfo().Assembly
+};
+            Xamarin.Forms.Forms.Init(e, assembliesToInclude);
+
 
             LoadApplication(new XamarinFormsStarterKit.App());
         }

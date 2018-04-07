@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg"
+     width="500" height="40" viewBox="0 0 500 40">
+    <rect width="500" height="40" stroke="black" stroke-width="3" fill="#FILLCOLOR" />
+    <text x="0" y="35" font-family="Verdana" font-size="35">
+        #TEXT
+    </text>
+</svg>

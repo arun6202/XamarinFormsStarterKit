@@ -7,7 +7,7 @@ using Xamarin.Forms;
 //using XamarinFormsStarterKit.LayoutGallery.airbnb_lottie_android.XAML;
 //using XamarinFormsStarterKit.LayoutGallery.armcha_Ribble.XAML;
 using XamarinFormsStarterKit.LayoutGallery.kickstarter_androidoss.XAML;
-//using XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer.XAML;
+using XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer.XAML;
 
 namespace XamarinFormsStarterKit
 {
@@ -17,7 +17,7 @@ namespace XamarinFormsStarterKit
 		{
 			InitializeComponent();
 
-            MainPage = new DashBoardView();
+            MainPage = new Tester();
 		}
 
 		protected override void OnStart ()

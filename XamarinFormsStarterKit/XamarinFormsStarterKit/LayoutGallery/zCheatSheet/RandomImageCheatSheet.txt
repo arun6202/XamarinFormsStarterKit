@@ -1,1 +1,14 @@
-﻿
+﻿xxxs  - extra extra extra small 10/10
+xxs- extra extra small 20/20
+xs- extra  small  30/30
+sm -small   40/40
+md - medium 60/60
+lg -large    80/80
+xl - extra large 100/100
+xxl - extra extra large 120/120
+xxxl - extra extra large 140/140
+
+
+
+https://material.io/devices/
+

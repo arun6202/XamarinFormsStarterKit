@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer.XAML.Tester" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations" xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="20">
+            <BoxView HeightRequest="100">
+            </BoxView>
+            <ScrollView>
+                <StackLayout Orientation="Vertical" Spacing="20">
+                    <ffimageloadingsvg:SvgCachedImage Source="xxxs"  />
+                    <ffimageloadingsvg:SvgCachedImage Source="xxs" />
+                    <ffimageloadingsvg:SvgCachedImage Source="xs" />
+                    <ffimageloadingsvg:SvgCachedImage Source="sm" />
+                    <ffimageloadingsvg:SvgCachedImage Source="md" />
+                    <ffimageloadingsvg:SvgCachedImage Source="lg" />
+                    <ffimageloadingsvg:SvgCachedImage Source="xl" />
+                    <ffimageloadingsvg:SvgCachedImage Source="xxl" />
+                    <ffimageloadingsvg:SvgCachedImage Source="xxxl" />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -7,10 +7,8 @@
   <ItemGroup>
     <PackageReference Include="DevsDNA.XFParallax" Version="1.0.0" />
     <PackageReference Include="DK.SlidingPanel" Version="2.1.0" />
-    <PackageReference Include="IdentityModel" Version="3.3.1" />
     <PackageReference Include="LayoutCreator" Version="1.0.1" />
     <PackageReference Include="LiteDB" Version="4.1.2" />
-    <PackageReference Include="Naxam.BottomTabbedPage" Version="0.2.0.1" />
     <PackageReference Include="Naxam.I18n" Version="1.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="PCLCrypto" Version="2.0.147" />
@@ -52,6 +50,9 @@
     <PackageReference Include="DLToolkit.Forms.Controls.ImageCropView" Version="1.0.6" />
     <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
     <PackageReference Include="Xamarin.CustomControls.RepeaterView" Version="1.2.2" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.3.6" />
+    <PackageReference Include="IdentityModel" Version="3.4.0" />
+    <PackageReference Include="Naxam.BottomTabbedPage" Version="0.2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -68,9 +69,6 @@
     </Compile>
     <Compile Update="LayoutGallery\kickstarter_android-oss\XAML\BackerView.xaml.cs">
       <DependentUpon>BackerView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="LayoutGallery\VisualElementColorizer\XAML\Tester.xaml.cs">
-      <DependentUpon>Tester.xaml</DependentUpon>
     </Compile>
     <Compile Update="XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit\MyPage.xaml.cs">
       <DependentUpon>MyPage.xaml</DependentUpon>
@@ -103,12 +101,15 @@
     <None Remove="LayoutGallery\kickstarter_android-oss\images\target\dashboardUWPFULL.PNG" />
     <None Remove="XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit\XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit.csproj" />
     <None Remove="LayoutGallery\SampleImages\basicbitmaps-large.png" />
+    <None Remove="LayoutGallery\VisualElementColorizer\XAML\replace.svg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="LayoutGallery\armcha_Ribble\images\reference\XAML\BackerView.xaml" />
     <EmbeddedResource Remove="LayoutGallery\armcha_Ribble\images\reference\XAML\DashBoardView.xaml" />
+    <EmbeddedResource Remove="LayoutGallery\VisualElementColorizer\XAML copy\Tester.xaml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LayoutGallery\SampleImages\basicbitmaps-large.png" />
+    <EmbeddedResource Include="LayoutGallery\VisualElementColorizer\XAML\replace.svg" />
   </ItemGroup>
 </Project>

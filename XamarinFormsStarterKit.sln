@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsStarterKit.iOS"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsStarterKit.UWP", "XamarinFormsStarterKit\XamarinFormsStarterKit.UWP\XamarinFormsStarterKit.UWP.csproj", "{E95BC84C-5367-42B1-9A22-12799A826A76}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamarinFormsStarterKit", "XamarinFormsStarterKit\XamarinFormsStarterKit\XamarinFormsStarterKit.csproj", "{A3F21989-E50B-4B3C-97E0-B259A5BA0E51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsStarterKit", "XamarinFormsStarterKit\XamarinFormsStarterKit\XamarinFormsStarterKit.csproj", "{A3F21989-E50B-4B3C-97E0-B259A5BA0E51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,7 +40,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3748A9DA-E5AE-4BE2-9F42-81BE0A0BBE5F}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
-		{3748A9DA-E5AE-4BE2-9F42-81BE0A0BBE5F}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
 		{3748A9DA-E5AE-4BE2-9F42-81BE0A0BBE5F}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
 		{3748A9DA-E5AE-4BE2-9F42-81BE0A0BBE5F}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
 		{3748A9DA-E5AE-4BE2-9F42-81BE0A0BBE5F}.Ad-Hoc|ARM.Build.0 = Release|Any CPU
@@ -111,7 +110,7 @@ Global
 		{3748A9DA-E5AE-4BE2-9F42-81BE0A0BBE5F}.Release|x86.ActiveCfg = Release|Any CPU
 		{3748A9DA-E5AE-4BE2-9F42-81BE0A0BBE5F}.Release|x86.Build.0 = Release|Any CPU
 		{3748A9DA-E5AE-4BE2-9F42-81BE0A0BBE5F}.Release|x86.Deploy.0 = Release|Any CPU
-		{F4D2B04C-7121-4A34-9C37-545808A796FD}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
+		{F4D2B04C-7121-4A34-9C37-545808A796FD}.Ad-Hoc|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{F4D2B04C-7121-4A34-9C37-545808A796FD}.Ad-Hoc|ARM.ActiveCfg = Ad-Hoc|iPhone
 		{F4D2B04C-7121-4A34-9C37-545808A796FD}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{F4D2B04C-7121-4A34-9C37-545808A796FD}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
@@ -144,6 +143,7 @@ Global
 		{F4D2B04C-7121-4A34-9C37-545808A796FD}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{F4D2B04C-7121-4A34-9C37-545808A796FD}.Release|x64.ActiveCfg = Release|iPhone
 		{F4D2B04C-7121-4A34-9C37-545808A796FD}.Release|x86.ActiveCfg = Release|iPhone
+		{F4D2B04C-7121-4A34-9C37-545808A796FD}.Ad-Hoc|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{E95BC84C-5367-42B1-9A22-12799A826A76}.Ad-Hoc|Any CPU.ActiveCfg = Release|x86
 		{E95BC84C-5367-42B1-9A22-12799A826A76}.Ad-Hoc|Any CPU.Build.0 = Release|x86
 		{E95BC84C-5367-42B1-9A22-12799A826A76}.Ad-Hoc|Any CPU.Deploy.0 = Release|x86
