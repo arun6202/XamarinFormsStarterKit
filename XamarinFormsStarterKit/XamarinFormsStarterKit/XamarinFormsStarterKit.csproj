@@ -59,6 +59,7 @@
     <Compile Remove="XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit\Properties\AssemblyInfo.cs" />
     <Compile Remove="LayoutGallery\armcha_Ribble\XAML\DashBoardView.xaml.cs" />
     <Compile Remove="LayoutGallery\armcha_Ribble\images\reference\XAML\DashBoardView.xaml.cs" />
+    <Compile Remove="LayoutGallery\k0shk0sh_FastHub\XAML\DashBoardView.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
@@ -75,6 +76,12 @@
     </Compile>
     <Compile Update="LayoutGallery\armcha_Ribble\XAML\DetailsView.xaml.cs">
       <DependentUpon>DetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="LayoutGallery\k0shk0sh_FastHub\XAML\DashBoardView.xaml.cs">
+      <DependentUpon>DashBoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="LayoutGallery\k0shk0sh_FastHub\XAML\home.xaml.cs">
+      <DependentUpon>home.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -94,6 +101,11 @@
     <Folder Include="LayoutGallery\armcha_Ribble\XAML\" />
     <Folder Include="LayoutGallery\armcha_Ribble\images\target\" />
     <Folder Include="LayoutGallery\armcha_Ribble\images\reference\" />
+    <Folder Include="LayoutGallery\k0shk0sh_FastHub\" />
+    <Folder Include="LayoutGallery\k0shk0sh_FastHub\images\" />
+    <Folder Include="LayoutGallery\k0shk0sh_FastHub\XAML\" />
+    <Folder Include="LayoutGallery\k0shk0sh_FastHub\images\Target\" />
+    <Folder Include="LayoutGallery\k0shk0sh_FastHub\images\reference\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="LayoutGallery\kickstarter_android-oss\images\reference\Example3.gif" />

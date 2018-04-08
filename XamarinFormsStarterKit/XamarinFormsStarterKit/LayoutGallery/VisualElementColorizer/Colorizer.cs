@@ -227,67 +227,7 @@ return;
         }
 
 
-        public static void Image(Layout layout, bool apply = true)
-        {
-
-#if DEBUG
-
-#else
-return;
-#endif
-
-            if (!apply)
-            {
-                return;
-            }
-
-
-            foreach (var child in layout.Children)
-            {
-                if (child is Layout currentLayout)
-                {
-                    Colorize(currentLayout);
-                }
-
-                if (child is Image image)
-                {
-
-                    var currentControl = (Image)child;
-
-                    var source = currentControl.Source.ToString();
-                    source = source.Replace("File:", "");
-                    var dimensions = source.Split(new string[] { "/" }, StringSplitOptions.None);
-
-                    if (Int32.TryParse(dimensions[0], out int width))
-                    {
-                        currentControl.WidthRequest = width;
-                    }
-
-                    if (Int32.TryParse(dimensions[1], out int height))
-                    {
-                        currentControl.HeightRequest = height;
-                    }
-
-
-                    if (Device.RuntimePlatform == Device.iOS)
-                    {
-                        currentControl.Source = "Icon-Small";
-                    }
-
-                    if (Device.RuntimePlatform == Device.Android)
-                    {
-                        currentControl.Source = "icon";
-                    }
-                    if (Device.RuntimePlatform == Device.UWP)
-                    {
-                        currentControl.Source = "Square150x150Logo.scale-100";
-                    }
-
-                }
-
-            }
-        }
-
+      
 
         public static void LoremText(Layout layout, bool apply = true)
         {

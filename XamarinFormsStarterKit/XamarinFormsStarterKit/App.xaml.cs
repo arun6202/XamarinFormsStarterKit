@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms;
+using XamarinFormsStarterKit.LayoutGallery.k0shk0sh_FastHub.XAML;
 //using XamarinFormsStarterKit.LayoutGallery.wwayne_react_native_nba_app.XAML;
 //using XamarinFormsStarterKit.LayoutGallery.airbnb_lottie_android.XAML;
 //using XamarinFormsStarterKit.LayoutGallery.armcha_Ribble.XAML;
-using XamarinFormsStarterKit.LayoutGallery.kickstarter_androidoss.XAML;
-using XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer.XAML;
+//using XamarinFormsStarterKit.LayoutGallery.kickstarter_androidoss.XAML;
+//using XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer.XAML;
 
 namespace XamarinFormsStarterKit
 {
@@ -17,7 +18,7 @@ namespace XamarinFormsStarterKit
 		{
 			InitializeComponent();
 
-            MainPage = new Tester();
+            MainPage = new home();
 		}
 
 		protected override void OnStart ()
