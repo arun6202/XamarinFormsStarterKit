@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage BackgroundColor="Red" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.LayoutGallery.k0shk0sh_FastHub.XAML.home">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.LayoutGallery.k0shk0sh_FastHub.XAML.home" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations" xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
     <ContentPage.Content>
+        <FlexLayout Direction="Column" AlignItems="Stretch">
+            <AbsoluteLayout FlexLayout.Grow="1.5">
+                <ffimageloadingsvg:SvgCachedImage Source="xxs" AbsoluteLayout.LayoutBounds=".05,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <Label Text="w" AbsoluteLayout.LayoutBounds=".2,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <ffimageloadingsvg:SvgCachedImage Source="xxs" AbsoluteLayout.LayoutBounds=".80,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <ffimageloadingsvg:SvgCachedImage Source="xxs" AbsoluteLayout.LayoutBounds=".95,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            </AbsoluteLayout>
+            <FlexLayout FlexLayout.Grow="10" AlignContent="Start" Direction="Column">
+                <FlexLayout FlexLayout.Grow="1" Direction="Row" AlignItems="Center" JustifyContent="Center">
+                    
+                    <ffimageloadingsvg:SvgCachedImage Source="md"  FlexLayout.AlignSelf="Center"/>
+                    
+                    <FlexLayout FlexLayout.Grow="3" Direction="Column" AlignItems="Center" JustifyContent="Center">
+                         <ffimageloadingsvg:SvgCachedImage Source="xxs" />
+                    <Label Text="w" />
+                       <!-- <Label Text="w3">
+                        </Label>
+                        <Label Text="w5">
+                        </Label>
+                        <Label Text="w4">
+                        </Label>
+                        <Label Text="w2">
+                        </Label>
+                        <Label Text="w3">
+                        </Label>
+                        <Label Text="w5">
+                        </Label>-->
+                    </FlexLayout>
+                </FlexLayout>
+                <BoxView FlexLayout.Grow="1">
+                </BoxView>
+                <BoxView FlexLayout.Grow="1">
+                </BoxView>
+                <BoxView FlexLayout.Grow="1">
+                </BoxView>
+                <BoxView FlexLayout.Grow="1">
+                </BoxView>
+                <BoxView FlexLayout.Grow="1">
+                </BoxView>
+                <BoxView FlexLayout.Grow="1">
+                </BoxView>
+                <BoxView FlexLayout.Grow="1">
+                </BoxView>
+            </FlexLayout>
+            <FlexLayout FlexLayout.Grow="1.5" Direction="Row" AlignItems="Center" JustifyContent="Center">
+                <FlexLayout Direction="Column" >
+                    <ffimageloadingsvg:SvgCachedImage Source="xxs" />
+                    <Label Text="w" />
+                </FlexLayout>
+                <FlexLayout Direction="Column" AlignItems="Center" JustifyContent="Center">
+                    <ffimageloadingsvg:SvgCachedImage Source="xxs" />
+                    <Label Text="w" />
+                </FlexLayout>
+                <FlexLayout Direction="Column" AlignItems="Center" JustifyContent="Center">
+                    <ffimageloadingsvg:SvgCachedImage Source="xxs" />
+                    <Label Text="w" />
+                </FlexLayout>
+            </FlexLayout>
+        </FlexLayout>
     </ContentPage.Content>
 </ContentPage>

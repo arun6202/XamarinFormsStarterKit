@@ -21,7 +21,7 @@ namespace XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer
             loremTextList = new List<Color>(colorList);
             loremImageList = new List<Color>(colorList);
 
-             svgImageList = new List<string>
+            svgImageList = new List<string>
     {
 horizontalstripes,
 greenstripes,
@@ -51,13 +51,13 @@ argyle,
 
         static List<string> svgImageList;
 
-        public static void RandomImage(Layout layout , bool apply = true)
+        public static void RandomImage(Layout layout, bool apply = true)
         {
-            #if DEBUG
+#if DEBUG
 
-            #else
+#else
             return;
-            #endif
+#endif
 
             if (!apply)
             {
@@ -75,17 +75,21 @@ argyle,
 
                 if (child is SvgCachedImage img)
                 {
+                    var imageControl = (VisualElement)child;
+                    imageControl.BackgroundColor = Color.Transparent;
+
+
                     var source = img.Source.ToString();
                     source = source.Replace("File:", "").ToLower().Trim();
-                    double height =40;
-                    double width =40;
+                    double height = 40;
+                    double width = 40;
                     switch (source)
                     {
                         case "xxxs":
                             height = 10;
                             width = 10;
                             break;
- 
+
                         case "xxs":
                             height = 20;
                             width = 20;
@@ -118,9 +122,9 @@ argyle,
                             height = 200;
                             width = 200;
                             break;
-                        
+
                         default:
-                            if (source.Trim()!=string.Empty)
+                            if (source.Trim() != string.Empty)
                             {
                                 var dimensions = source.Split(new string[] { "/" }, StringSplitOptions.None);
 
@@ -141,7 +145,7 @@ argyle,
                                 width = 40;
 
                             }
-                           
+
                             break;
                     }
                     img.Source = RandomImage(svgImageList);
@@ -149,11 +153,11 @@ argyle,
                     img.WidthRequest = width;
 
                 }
-                 
+
             }
 
 
-         }
+        }
 
         static List<Color> colorizeList;
         static List<Color> loremTextList;
@@ -227,7 +231,7 @@ return;
         }
 
 
-      
+
 
         public static void LoremText(Layout layout, bool apply = true)
         {
@@ -252,6 +256,8 @@ return;
 
                 if (child.GetType().GetTypeInfo().GetDeclaredProperty("Text") != null)
                 {
+                    var currentControl = (VisualElement)child;
+                    currentControl.BackgroundColor = Color.Transparent;
 
                     if ((child is Label label))
                     {
@@ -378,7 +384,7 @@ return;
 
             return text;
         }
-       
+
 
         public static string horizontalstripes = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSIzMCI+CjxyZWN0IHdpZHRoPSI5MCIgaGVpZ2h0PSIzMCIgZmlsbD0iIzAwYTlmMSI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iOTAiIGhlaWdodD0iMTgiIGZpbGw9IiMyNmJhZjQiPjwvcmVjdD4KPC9zdmc+";
         public static string greenstripes = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCI+CjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2JiZDgxNyI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiPgo8cmVjdCB3aWR0aD0iOTkiIGhlaWdodD0iMjUiIGZpbGw9IiNhOWNlMDAiPjwvcmVjdD4KPHJlY3QgeT0iLTUwIiB3aWR0aD0iOTkiIGhlaWdodD0iMjUiIGZpbGw9IiNhOWNlMDAiPjwvcmVjdD4KPC9nPgo8L3N2Zz4=";

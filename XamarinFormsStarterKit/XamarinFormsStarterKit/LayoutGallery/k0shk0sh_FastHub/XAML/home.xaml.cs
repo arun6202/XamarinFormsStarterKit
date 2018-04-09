@@ -10,6 +10,11 @@ namespace XamarinFormsStarterKit.LayoutGallery.k0shk0sh_FastHub.XAML
         public home()
         {
             InitializeComponent();
+            VisualElementColorizer.Colorizer.Colorize((Layout)Content);
+            VisualElementColorizer.Colorizer.RandomImage((Layout)Content);
+            VisualElementColorizer.Colorizer.LoremText((Layout)Content);
+
+
         }
     }
 }
