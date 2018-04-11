@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-                          xmlns:ctrl="clr-namespace:XamarinFormsStarterKit.LayoutGallery.k0shk0sh_FastHub.XAML;assembly=XamarinFormsStarterKit"  
-
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.LayoutGallery.k0shk0sh_FastHub.XAML.home" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations" xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:ctrl="clr-namespace:XamarinFormsStarterKit.LayoutGallery.k0shk0sh_FastHub.XAML.contentview;&#xA;    assembly=XamarinFormsStarterKit" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinFormsStarterKit.LayoutGallery.k0shk0sh_FastHub.XAML.home" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations" xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
     <ContentPage.Content>
-        <FlexLayout Direction="Column" AlignItems="Stretch">
+        <FlexLayout Direction="Column" AlignItems="Start">
             <AbsoluteLayout FlexLayout.Grow="1.5">
                 <ffimageloadingsvg:SvgCachedImage Source="xxs" AbsoluteLayout.LayoutBounds=".05,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
                 <Label Text="w" AbsoluteLayout.LayoutBounds=".2,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
                 <ffimageloadingsvg:SvgCachedImage Source="xxs" AbsoluteLayout.LayoutBounds=".80,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
                 <ffimageloadingsvg:SvgCachedImage Source="xxs" AbsoluteLayout.LayoutBounds=".95,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
             </AbsoluteLayout>
-            <FlexLayout FlexLayout.Grow="10" Direction="Column">
-
-                <ctrl:contentview.Row>  </ctrl:contentview.Row>
-
-                <BoxView FlexLayout.Grow="1">
-                </BoxView>
-                <BoxView FlexLayout.Grow="1">
-                </BoxView>
-                <BoxView FlexLayout.Grow="1">
-                </BoxView>
-                <BoxView FlexLayout.Grow="1">
-                </BoxView>
-                <BoxView FlexLayout.Grow="1">
-                </BoxView>
-                <BoxView FlexLayout.Grow="1">
-                </BoxView>
-            </FlexLayout>
+            <ScrollView FlexLayout.Grow="10">
+                <FlexLayout FlexLayout.Grow="1" Direction="Column">
+                <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                     <ctrl:Row></ctrl:Row>
+                </FlexLayout>
+            </ScrollView>
             <FlexLayout FlexLayout.Grow="1.5" Direction="Row" AlignItems="Center" JustifyContent="Center">
                 <FlexLayout FlexLayout.Grow="1" Direction="Column" AlignItems="Center" JustifyContent="Center">
                     <ffimageloadingsvg:SvgCachedImage Source="xxs" />
