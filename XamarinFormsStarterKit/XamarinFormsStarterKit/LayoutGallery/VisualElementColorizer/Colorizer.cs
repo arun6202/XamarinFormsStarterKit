@@ -12,42 +12,35 @@ namespace XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer
     public static class Colorizer
     {
 
-        static Colorizer()
+       
+        public static void CompressedLayoutHeadless(Layout layout, bool apply = true)
         {
-            colorizeList = new List<Color>(colorList);
-            colorizeLightList = new List<Color>(colorList);
-            colorizeDarkList = new List<Color>(colorList);
 
-            loremTextList = new List<Color>(colorList);
-            loremImageList = new List<Color>(colorList);
-
-            svgImageList = new List<string>
-    {
-horizontalstripes,
-greenstripes,
-honeycomb,
-chevrons,
-carbonfiber,
-microbialmat,
-dance,
-checkerboard,
-waves,
-verticalstripes,
-shippo,
-halfrombes,
-transparent,
-simplehorizontal,
-whitecarbon,
-crossstripes,
-subtledots,
-thinstripes,
-specklednoise,
-blueprintgrid,
-argyle,
+ 
+            if (!apply)
+            {
+                return;
+            }
 
 
-    };
+            
+            foreach (var child in layout.Children)
+            {
+                if (child is Layout currentLayout)
+                {
+                    CompressedLayoutHeadless(currentLayout);
+                }
+                 
+                if (child is Layout currentLayoutHeadless)
+                {
+                    CompressedLayout.SetIsHeadless(child,true);
+
+                }
+                 
+            }
         }
+
+
 
         static List<string> svgImageList;
 
@@ -385,6 +378,42 @@ return;
             return text;
         }
 
+        static Colorizer()
+        {
+            colorizeList = new List<Color>(colorList);
+            colorizeLightList = new List<Color>(colorList);
+            colorizeDarkList = new List<Color>(colorList);
+
+            loremTextList = new List<Color>(colorList);
+            loremImageList = new List<Color>(colorList);
+
+            svgImageList = new List<string>
+    {
+horizontalstripes,
+greenstripes,
+honeycomb,
+chevrons,
+carbonfiber,
+microbialmat,
+dance,
+checkerboard,
+waves,
+verticalstripes,
+shippo,
+halfrombes,
+transparent,
+simplehorizontal,
+whitecarbon,
+crossstripes,
+subtledots,
+thinstripes,
+specklednoise,
+blueprintgrid,
+argyle,
+
+
+    };
+        }
 
         public static string horizontalstripes = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSIzMCI+CjxyZWN0IHdpZHRoPSI5MCIgaGVpZ2h0PSIzMCIgZmlsbD0iIzAwYTlmMSI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iOTAiIGhlaWdodD0iMTgiIGZpbGw9IiMyNmJhZjQiPjwvcmVjdD4KPC9zdmc+";
         public static string greenstripes = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCI+CjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2JiZDgxNyI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiPgo8cmVjdCB3aWR0aD0iOTkiIGhlaWdodD0iMjUiIGZpbGw9IiNhOWNlMDAiPjwvcmVjdD4KPHJlY3QgeT0iLTUwIiB3aWR0aD0iOTkiIGhlaWdodD0iMjUiIGZpbGw9IiNhOWNlMDAiPjwvcmVjdD4KPC9nPgo8L3N2Zz4=";

@@ -11,6 +11,7 @@ namespace XamarinFormsStarterKit.LayoutGallery.k0shk0sh_FastHub.XAML
         {
             InitializeComponent();
             VisualElementColorizer.Colorizer.Colorize((Layout)Content);
+          //  VisualElementColorizer.Colorizer.CompressedLayoutHeadless((Layout)Content);
             VisualElementColorizer.Colorizer.RandomImage((Layout)Content);
             VisualElementColorizer.Colorizer.LoremText((Layout)Content);
 
