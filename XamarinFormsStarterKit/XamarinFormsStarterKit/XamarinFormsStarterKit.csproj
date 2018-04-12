@@ -80,9 +80,6 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="LayoutGallery\k0shk0sh_FastHub\XAML\DashBoardView.xaml.cs">
       <DependentUpon>DashBoardView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="LayoutGallery\k0shk0sh_FastHub\XAML\home.xaml.cs">
-      <DependentUpon>home.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -95,7 +92,6 @@
     <Folder Include="LayoutGallery\zCheatSheet\" />
     <Folder Include="LayoutGallery\VisualElementColorizer\" />
     <Folder Include="LayoutGallery\VisualElementColorizer\XAML\" />
-    <Folder Include="LayoutGallery\SampleImages\" />
     <Folder Include="LayoutGallery\armcha_Ribble\" />
     <Folder Include="LayoutGallery\armcha_Ribble\images\" />
     <Folder Include="LayoutGallery\armcha_Ribble\XAML\" />
@@ -113,7 +109,6 @@
     <None Remove="LayoutGallery\kickstarter_android-oss\images\target\dashboardUWP.PNG" />
     <None Remove="LayoutGallery\kickstarter_android-oss\images\target\dashboardUWPFULL.PNG" />
     <None Remove="XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit\XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit.csproj" />
-    <None Remove="LayoutGallery\SampleImages\basicbitmaps-large.png" />
     <None Remove="LayoutGallery\VisualElementColorizer\XAML\replace.svg" />
   </ItemGroup>
   <ItemGroup>
@@ -122,7 +117,6 @@
     <EmbeddedResource Remove="LayoutGallery\VisualElementColorizer\XAML copy\Tester.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LayoutGallery\SampleImages\basicbitmaps-large.png" />
     <EmbeddedResource Include="LayoutGallery\VisualElementColorizer\XAML\replace.svg" />
   </ItemGroup>
 </Project>
