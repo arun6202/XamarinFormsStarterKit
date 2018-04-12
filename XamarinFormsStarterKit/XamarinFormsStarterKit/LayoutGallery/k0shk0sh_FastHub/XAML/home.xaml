@@ -8,7 +8,10 @@
                 <ffimageloadingsvg:SvgCachedImage Source="xxs" AbsoluteLayout.LayoutBounds=".80,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
                 <ffimageloadingsvg:SvgCachedImage Source="xxs" AbsoluteLayout.LayoutBounds=".95,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
             </AbsoluteLayout>
-           
+            
+            <Frame FlexLayout.Grow=".01" OutlineColor="Silver" HasShadow="true" >  
+             </Frame> 
+            
                 <FlexLayout FlexLayout.Grow="10" Direction="Column">
                  
                      <ctrl:Row></ctrl:Row>
@@ -22,7 +25,13 @@
                     
                     
                     </FlexLayout>
-            <FlexLayout FlexLayout.Grow="1.5" Direction="Row" AlignItems="Center" JustifyContent="Center">
+
+
+           <Frame FlexLayout.Grow=".01" OutlineColor="Silver" HasShadow="true" >  
+             </Frame>
+            
+            <FlexLayout FlexLayout.Grow="1.5" Direction="Row" AlignItems="Center" JustifyContent="Center" >
+
                 <FlexLayout FlexLayout.Grow="1" Direction="Column" AlignItems="Center" JustifyContent="Center">
                     <ffimageloadingsvg:SvgCachedImage Source="xxs" />
                     <Label Text="w" />
