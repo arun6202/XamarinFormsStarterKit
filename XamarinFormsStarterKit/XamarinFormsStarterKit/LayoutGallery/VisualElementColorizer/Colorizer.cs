@@ -49,6 +49,34 @@ argyle,
     };
         }
 
+
+		public static void CompressedLayoutHeadless(Layout layout, bool apply = true)
+        {
+
+ 
+            if (!apply)
+            {
+                return;
+            }
+
+
+            
+            foreach (var child in layout.Children)
+            {
+                if (child is Layout currentLayout)
+                {
+                    CompressedLayoutHeadless(currentLayout);
+                }
+                 
+                if (child is Layout currentLayoutHeadless)
+                {
+                    CompressedLayout.SetIsHeadless(child,true);
+
+                }
+                 
+            }
+        }
+
         static List<string> svgImageList;
 
         public static void RandomImage(Layout layout, bool apply = true)
