@@ -11,8 +11,15 @@
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Appium.WebDriver" Version="3.0.0.2" />
     <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="PdfSharp" Version="1.32.3057" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="ScreenShot203157.png" />
+    <None Remove="ScreenShot204259.png" />
+    <None Remove="ScreenShot204450.png" />
+    <None Remove="ScreenShot220801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Screenshots\" />
   </ItemGroup>
 </Project>
