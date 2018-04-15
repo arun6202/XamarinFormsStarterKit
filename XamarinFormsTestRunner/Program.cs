@@ -9,12 +9,15 @@ using PdfSharp.Drawing;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
 using System.Collections.Generic;
+using OpenQA.Selenium.Appium.Android;
 
 namespace XamarinFormsTestRunner
 {
 	class Program
 	{
-		private static AppiumDriver<IOSElement> driver;
+		private static AppiumDriver<IOSElement> iosDriver;
+		private static AppiumDriver<AndroidElement> droiddriver;
+
 
 		public static TimeSpan INIT_TIMEOUT_SEC = TimeSpan.FromSeconds(180);
 		public static TimeSpan IMPLICIT_TIMEOUT_SEC = TimeSpan.FromSeconds(5);
@@ -25,44 +28,76 @@ namespace XamarinFormsTestRunner
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Starting Program...");
-            Console.WriteLine(DateTime.Now);
+			Console.WriteLine(DateTime.Now);
 
-			CreateSimulatorAndScreenshots();
+			CreateAndroidSimulatorAndScreenshots();
+			//	CreateIOSSimulatorAndScreenshots();
 
 
 			Console.WriteLine(DateTime.Now);
-            
+
 			Console.WriteLine("Completed All");
 
 			Console.Read();
 		}
 
-		private static void CreateSimulatorAndScreenshots()
+		private static void CreateAndroidSimulatorAndScreenshots()
 		{
-			foreach (var device in DeviceList)
+
+
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.SetCapability("platformVersion", "8.0");
+			capabilities.SetCapability("deviceName", "2960_1440_6.2");
+			capabilities.SetCapability("platformName", "Android");
+			capabilities.SetCapability("automationName", "UiAutomator2");
+			capabilities.SetCapability("app", "/Users/arun/XamarinFormsStarterKit/XamarinFormsTestRunner/com.companyname.XamarinFormsStarterKit.apk");
+
+			Uri serverUri = new Uri("http://0.0.0.0:4723/wd/hub");
+			droiddriver = new AndroidDriver<AndroidElement>(serverUri, capabilities, INIT_TIMEOUT_SEC);
+			droiddriver.Manage().Timeouts().ImplicitWait = INIT_TIMEOUT_SEC;
+
+			Console.WriteLine("taking screenshot... " + "Pixel 2 API 26");
+
+			var fileName = String.Format("{0}{1}{2}{3}", "Screenshots/", "Pixel 2 API 26" + " ", DateTime.Now.ToString("dd HH mm ss"), ".png");
+			var screenShot = droiddriver.GetScreenshot();
+			screenShot.SaveAsFile(fileName);
+
+
+			iosDriver.Quit();
+			Console.WriteLine(DateTime.Now);
+
+
+
+		}
+
+		private static void CreateIOSSimulatorAndScreenshots()
+		{
+			foreach (var device in DeviceListOnlyIOSPhone)
 			{
-				Console.WriteLine("Opening... " + device );
+				Console.WriteLine("Opening... " + device);
+				Console.WriteLine(DateTime.Now);
 
 				DesiredCapabilities capabilities = new DesiredCapabilities();
-				capabilities.SetCapability("platformName", "11.3");
+				capabilities.SetCapability("platformVersion", "11.3");
 				capabilities.SetCapability("deviceName", device);
 				capabilities.SetCapability("platformName", "iOS");
 				capabilities.SetCapability("automationName", "XCUITest");
-				capabilities.SetCapability("app", "/Users/arun/Desktop/XamarinFormsStarterKit.iOS.app");
+				capabilities.SetCapability("app", "/Users/arun/XamarinFormsStarterKit/XamarinFormsStarterKit/XamarinFormsStarterKit.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone10.3-11.3/XamarinFormsStarterKit.iOS.app");
 
 				Uri serverUri = new Uri("http://0.0.0.0:4723/wd/hub");
-				driver = new IOSDriver<IOSElement>(serverUri, capabilities, INIT_TIMEOUT_SEC);
-				driver.Manage().Timeouts().ImplicitWait = INIT_TIMEOUT_SEC;
+				iosDriver = new IOSDriver<IOSElement>(serverUri, capabilities, INIT_TIMEOUT_SEC);
+				iosDriver.Manage().Timeouts().ImplicitWait = INIT_TIMEOUT_SEC;
 
 				Console.WriteLine("taking screenshot... " + device);
-                 
-				var fileName = String.Format("{0}{1}{2}{3}", "Screenshots/",device + " ", DateTime.Now.ToString("dd HH mm ss"), ".png");
-				var screenShot = driver.GetScreenshot();
+
+				var fileName = String.Format("{0}{1}{2}{3}", "Screenshots/", device + " ", DateTime.Now.ToString("dd HH mm ss"), ".png");
+				var screenShot = iosDriver.GetScreenshot();
 				screenShot.SaveAsFile(fileName);
 
 				Console.WriteLine("Shutting down... " + device);
 
-				driver.Quit();
+				iosDriver.Quit();
+				Console.WriteLine(DateTime.Now);
 
 
 			}
@@ -86,7 +121,7 @@ namespace XamarinFormsTestRunner
 		public static string iPhoneX = "iPhone X";
 
 
-		public static List<string> DeviceList = new List<string>
+		public static List<string> DeviceListAllIOS = new List<string>
 		{
 
 		iPhone5s ,
@@ -100,15 +135,48 @@ namespace XamarinFormsTestRunner
 		iPhoneSE ,
 		iPhoneX ,
 		iPad5 ,
-        iPadair ,
-        iPadair2 ,
-        iPadpro10 ,
-        iPadpro12 ,
-        iPadpro9 ,
+		iPadair ,
+		iPadair2 ,
+		iPadpro10 ,
+		iPadpro12 ,
+		iPadpro9 ,
 		};
 
 
+		public static List<string> DeviceListOnlyIOSPhone = new List<string>
+		{
 
+		iPhone5s ,
+		iPhone6 ,
+		iPhone6s ,
+		iPhone6sp ,
+		iPhone7 ,
+		iPhone7P ,
+		iPhone8 ,
+		iPhone8p ,
+		iPhoneSE ,
+		iPhoneX ,
+
+		};
+
+
+		//android
+		//480_800_4
+		//480_854_4.3
+		//540_960_4.5
+		//720_1280_4.6
+		//768_1280_4.7
+		//800_480_4.8
+		//800_1280_5
+		//854_480_5.1
+		//960_540_5.2
+		//1080_1920_5.3
+		//1280_720_5.4
+		//1440_2560_5.5
+		//1920_1080_5.7
+		//2560_1440_5.8
+		//2960_1440_6
+		//2960_1440_6.2
 
 
 	}
