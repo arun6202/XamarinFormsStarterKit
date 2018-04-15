@@ -63,7 +63,7 @@ namespace XamarinFormsTestRunner
 			screenShot.SaveAsFile(fileName);
 
 
-			iosDriver.Quit();
+			droiddriver.Quit();
 			Console.WriteLine(DateTime.Now);
 
 
