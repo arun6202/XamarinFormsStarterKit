@@ -50,7 +50,7 @@ namespace XamarinFormsTestRunner
 			capabilities.SetCapability("deviceName", "2960_1440_6.2");
 			capabilities.SetCapability("platformName", "Android");
 			capabilities.SetCapability("automationName", "UiAutomator2");
-			capabilities.SetCapability("app", "/Users/arun/XamarinFormsStarterKit/XamarinFormsTestRunner/com.companyname.XamarinFormsStarterKit.apk");
+			capabilities.SetCapability("app", "/Users/arun/XamarinFormsStarterKit/XamarinFormsTestRunner/bin/Debug/netcoreapp2.0/com.companyname.XamarinFormsStarterKit.apk");
 
 			Uri serverUri = new Uri("http://0.0.0.0:4723/wd/hub");
 			droiddriver = new AndroidDriver<AndroidElement>(serverUri, capabilities, INIT_TIMEOUT_SEC);
