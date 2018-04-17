@@ -12,7 +12,6 @@
     <PackageReference Include="Naxam.I18n" Version="1.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="PCLCrypto" Version="2.0.147" />
-    <PackageReference Include="Plugin.GridViewControl" Version="1.0.8" />
     <PackageReference Include="Plugins.Forms.ButtonCircle" Version="2.0.2" />
     <PackageReference Include="Rg.Plugins.Popup" Version="1.0.4" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.60.0" />
@@ -52,7 +51,8 @@
     <PackageReference Include="Xam.Plugins.Messaging" Version="5.2.0" />
     <PackageReference Include="Xamarin.CustomControls.AccordionView" Version="1.0.8" />
     <PackageReference Include="Bogus" Version="22.0.8" />
-    <PackageReference Include="IdentityModel" Version="3.5.0" />
+    <PackageReference Include="Plugin.GridViewControl" Version="1.0.9" />
+    <PackageReference Include="IdentityModel" Version="3.6.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -89,7 +89,6 @@
     <Folder Include="LayoutGallery\kickstarter_android-oss\XAML\" />
     <Folder Include="LayoutGallery\kickstarter_android-oss\images\reference\" />
     <Folder Include="LayoutGallery\kickstarter_android-oss\images\target\" />
-    <Folder Include="LayoutGallery\zCheatSheet\" />
     <Folder Include="LayoutGallery\VisualElementColorizer\" />
     <Folder Include="LayoutGallery\VisualElementColorizer\XAML\" />
     <Folder Include="LayoutGallery\armcha_Ribble\" />
@@ -103,6 +102,11 @@
     <Folder Include="LayoutGallery\k0shk0sh_FastHub\images\Target\" />
     <Folder Include="LayoutGallery\k0shk0sh_FastHub\images\reference\" />
     <Folder Include="LayoutGallery\k0shk0sh_FastHub\XAML\contentview\" />
+    <Folder Include="DesignKitTemplates\" />
+    <Folder Include="DesignKitTemplates\Books\" />
+    <Folder Include="DesignKitTemplates\Books\XAML\" />
+    <Folder Include="DesignKitTemplates\Books\Images\" />
+    <Folder Include="CheatSheets\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="LayoutGallery\kickstarter_android-oss\images\reference\Example3.gif" />

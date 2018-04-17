@@ -113,6 +113,11 @@ argyle,
                     double width = 40;
                     switch (source)
                     {
+						case "fs":
+							height = 768;
+							width = 1024;
+                            break;
+						
                         case "xxxs":
                             height = 10;
                             width = 10;

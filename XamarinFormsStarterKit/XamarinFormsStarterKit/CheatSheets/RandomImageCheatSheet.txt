@@ -1,0 +1,27 @@
+﻿xxxs  - extra extra extra small 10/10
+xxs- extra extra small 20/20
+xs- extra  small  30/30
+sm -small   40/40
+md - medium 60/60
+lg -large    80/80
+xl - extra large 100/100
+xxl - extra extra large 120/120
+xxxl - extra extra large 140/140
+fs- Full screen image  768/1024
+
+
+https://material.io/devices/
+
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:ctrl="clr-namespace:XamarinFormsStarterKit.LayoutGallery.k0shk0sh_FastHub.XAML.contentview;
+   assembly=XamarinFormsStarterKit" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinFormsStarterKit.LayoutGallery.k0shk0sh_FastHub.XAML.home" 
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+    xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;
+    assembly=FFImageLoading.Transformations" 
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+
+
+
+      <ffimageloadingsvg:SvgCachedImage Source="xxs" AbsoluteLayout.LayoutBounds=".80,.8,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" />
