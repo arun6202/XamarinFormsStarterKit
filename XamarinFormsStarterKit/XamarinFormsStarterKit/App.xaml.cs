@@ -7,8 +7,10 @@ using Xamarin.Forms;
 //using XamarinFormsStarterKit.LayoutGallery.wwayne_react_native_nba_app.XAML;
 //using XamarinFormsStarterKit.LayoutGallery.airbnb_lottie_android.XAML;
 //using XamarinFormsStarterKit.LayoutGallery.armcha_Ribble.XAML;
-using XamarinFormsStarterKit.LayoutGallery.kickstarter_androidoss.XAML;
+//using XamarinFormsStarterKit.LayoutGallery.kickstarter_androidoss.XAML;
 //using XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer.XAML;
+
+using XamarinFormsStarterKit.DesignKitTemplates.Books.XAML;
 
 namespace XamarinFormsStarterKit
 {
@@ -18,7 +20,7 @@ namespace XamarinFormsStarterKit
 		{
 			InitializeComponent();
 
-            MainPage = new DashBoardView();
+			MainPage = new Sign_Up_1_1();
 		}
 
 		protected override void OnStart ()

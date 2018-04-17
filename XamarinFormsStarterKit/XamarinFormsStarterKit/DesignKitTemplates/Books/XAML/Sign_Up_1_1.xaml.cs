@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using XamarinFormsStarterKit.LayoutGallery.VisualElementColorizer;
 using Xamarin.Forms;
 
 namespace XamarinFormsStarterKit.DesignKitTemplates.Books.XAML
@@ -10,6 +10,7 @@ namespace XamarinFormsStarterKit.DesignKitTemplates.Books.XAML
         public Sign_Up_1_1()
         {
             InitializeComponent();
+			Colorizer.RandomImage((Layout)Content);
         }
     }
 }
