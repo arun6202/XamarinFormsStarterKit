@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
-    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
 <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
+<AndroidSupportedAbis>x86;armeabi-v7a</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -79,9 +79,6 @@
     </PackageReference>
     <PackageReference Include="Xam.Plugins.Settings">
       <Version>3.1.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xam.Plugins.TextToSpeech">
-      <Version>3.3.2</Version>
     </PackageReference>
     <PackageReference Include="Xamanimation">
       <Version>1.1.0</Version>

@@ -46,17 +46,18 @@ namespace XamarinFormsTestRunner
 
 
 			DesiredCapabilities capabilities = new DesiredCapabilities();
-			capabilities.SetCapability("platformVersion", "8.0");
-			capabilities.SetCapability("deviceName", "2960_1440_6.2");
-			capabilities.SetCapability("platformName", "Android");
+			capabilities.SetCapability("platformVersion", "6.0");
+			capabilities.SetCapability("deviceName", "Android_Accelerated_x86");
+			capabilities.SetCapability("avd", "Android_Accelerated_x86");          
+            capabilities.SetCapability("platformName", "Android");
 			capabilities.SetCapability("automationName", "UiAutomator2");
-			capabilities.SetCapability("app", "/Users/arun/XamarinFormsStarterKit/XamarinFormsTestRunner/bin/Debug/netcoreapp2.0/com.companyname.XamarinFormsStarterKit.apk");
+			capabilities.SetCapability("app", "/Users/arunbalakrishnan/Desktop/com.companyname.XamarinFormsStarterKit-x86.apk");
 
 			Uri serverUri = new Uri("http://0.0.0.0:4723/wd/hub");
 			droiddriver = new AndroidDriver<AndroidElement>(serverUri, capabilities, INIT_TIMEOUT_SEC);
 			droiddriver.Manage().Timeouts().ImplicitWait = INIT_TIMEOUT_SEC;
 
-			Console.WriteLine("taking screenshot... " + "Pixel 2 API 26");
+			Console.WriteLine("taking screenshot... " + "Nexus_Edited_6_API_27");
 
 			var fileName = String.Format("{0}{1}{2}{3}", "Screenshots/", "Pixel 2 API 26" + " ", DateTime.Now.ToString("dd HH mm ss"), ".png");
 			var screenShot = droiddriver.GetScreenshot();
