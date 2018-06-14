@@ -107,6 +107,7 @@
     <Folder Include="DesignKitTemplates\Books\XAML\" />
     <Folder Include="DesignKitTemplates\Books\Images\" />
     <Folder Include="CheatSheets\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="LayoutGallery\kickstarter_android-oss\images\reference\Example3.gif" />
@@ -114,6 +115,7 @@
     <None Remove="LayoutGallery\kickstarter_android-oss\images\target\dashboardUWPFULL.PNG" />
     <None Remove="XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit\XamarinFormsStarterKit.Xamarin.FormsBook.Toolkit.csproj" />
     <None Remove="LayoutGallery\VisualElementColorizer\XAML\replace.svg" />
+    <None Remove="Images\Jupiter.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="LayoutGallery\armcha_Ribble\images\reference\XAML\BackerView.xaml" />
@@ -122,5 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LayoutGallery\VisualElementColorizer\XAML\replace.svg" />
+    <EmbeddedResource Include="Images\Jupiter.png" />
   </ItemGroup>
 </Project>

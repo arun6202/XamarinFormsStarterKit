@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations" xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms" x:Class="XamarinFormsStarterKit.DesignKitTemplates.Books.XAML.Sign_Up_1_1">
-    <FlexLayout>
-        <RelativeLayout>
-            <ffimageloadingsvg:SvgCachedImage Source="fs" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" />
-        </RelativeLayout>
-    </FlexLayout>
-</ContentPage>
+         <FlexLayout>
+            <ffimageloadingsvg:SvgCachedImage Aspect="AspectFill" Source="fs"  />
+        </FlexLayout>
+ </ContentPage>
